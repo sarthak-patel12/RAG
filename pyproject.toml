@@ -22,3 +22,6 @@ dependencies = [
     "typesense>=1.1.1",
     "uvicorn>=0.35.0",
 ]
+[tool.setuptools.packages.find]
+include = ["db*", "models*", "routes*", "memory_management_and_caching*"]
+exclude = ["test_files*", "user_uploads*"]
