@@ -38,7 +38,6 @@ It’s designed for **accurate, citation-aware answers** to complex queries acro
 ├── db
 │ ├── db_create.py # Create Typesense collections
 │ ├── ingestion.py # Async document ingestion
-│ ├── ingestion_old.py # Legacy ingestion script
 │ └── retrieval.py # Hybrid search logic
 │
 ├── memory_management_and_caching
@@ -47,7 +46,6 @@ It’s designed for **accurate, citation-aware answers** to complex queries acro
 │
 ├── models
 │ ├── embeddings.py # Google embeddings
-│ ├── gemini.py # Gemini-based Q&A with citations
 │ ├── langchain_gemini.py # LangChain Gemini wrapper
 │ ├── langgraph_graph.py # LangGraph workflow
 │ └── langgraph_nodes.py # LangGraph nodes (retrieve, answer)
@@ -157,6 +155,7 @@ curl http://localhost:8000/health
 Open **`rag.ipynb`** and follow the step-by-step cells to ingest documents and run queries interactively.
 
 ---
+
 
 
 
