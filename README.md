@@ -32,31 +32,35 @@ It’s designed for **accurate, citation-aware answers** to complex queries acro
 
 ## 📂 Project Structure  
 ```
-.
-├── config.py                   # Environment variables & API keys
-├── main.py                     # FastAPI app entry point
+├── config.py # Environment variables & API keys
+├── main.py # FastAPI app entry point
 │
-├── db_create.py                 # Create Typesense collections
-├── ingestion.py                 # Async document ingestion
-├── ingestion_old.py             # Legacy ingestion version
-├── retrieval.py                 # Hybrid search logic
+├── db
+│ ├── db_create.py # Create Typesense collections
+│ ├── ingestion.py # Async document ingestion
+│ ├── ingestion_old.py # Legacy ingestion script
+│ └── retrieval.py # Hybrid search logic
 │
-├── conversation_manager.py      # Multi-turn memory manager
-├── cache_manager.py             # Query result caching
+├── memory_management_and_caching
+│ ├── conversation_manager.py # Multi-turn conversation memory
+│ └── cache_manager.py # Query result caching
 │
-├── embeddings.py                # Google embeddings
-├── gemini.py                    # Gemini-based Q&A with citations
-├── langchain_gemini.py          # LangChain Gemini LLM wrapper
-├── langgraph_graph.py           # LangGraph workflow
-├── langgraph_nodes.py           # LangGraph nodes (retrieve, answer)
+├── models
+│ ├── embeddings.py # Google embeddings
+│ ├── gemini.py # Gemini-based Q&A with citations
+│ ├── langchain_gemini.py # LangChain Gemini wrapper
+│ ├── langgraph_graph.py # LangGraph workflow
+│ └── langgraph_nodes.py # LangGraph nodes (retrieve, answer)
 │
-├── helper.py                    # File management & cleanup
+├── routes
+│ ├── helper.py # File management utilities
+│ ├── upload.py # Document upload API
+│ └── response.py # Question answering API
 │
-├── upload.py                    # Document upload API
-├── response.py                  # Question answering API
+├── user_uploads/ # Folder for storing user files
 │
-├── rag.ipynb                    # Jupyter demo notebook
-└── pyproject.toml               # Dependencies & metadata
+├── rag.ipynb # Jupyter notebook demo
+└── pyproject.toml # Dependencies & metadata
 ```
 
 ---
@@ -154,8 +158,5 @@ Open **`rag.ipynb`** and follow the step-by-step cells to ingest documents and r
 
 ---
 
-## 📌 Future Improvements  
-- Authentication & multi-user access control  
-- Advanced reranking for hybrid search  
-- Web-based chat UI with streaming responses  
-- Support for more document formats  
+
+
